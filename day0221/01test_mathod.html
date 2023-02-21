@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내장함수 test</title>
+  <style>
+    @font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  *{
+    font:  20pt 'TAEBAEKmilkyway';
+  }
+#dis{
+  font-weight: bold;
+  color: brown;
+}
+  </style>
+  <script>
+    function gender(){
+      var id="890730-2065913";
+      
+      if(id.charAt(7)==2 || id.charAt(7)==4){
+        document.getElementById('dis').innerHTML='여자입니다.';
+      }
+      else if(id.charAt(7)==1 || id.charAt(7)==3) {
+        document.getElementById('dis').innerHTML='남자입니다.';
+      }
+      else{
+        document.getElementById('dis').innerHTML='성별기입 오류입니다.';
+      }
+    }
+    function gender2(){
+      var id="890729-2065913";
+      var month1=id.substring(2,4);
+      var day=id.substring(4,6);
+      var test_substring = '당신의 생일은 '+month1+'월 '+day+'일 입니다.'+'<br>';
+
+      var month = id.substr(2,2);
+      var day = id.substr(4,2);
+      document.getElementById('dis').innerHTML=test_substring+'당신의 생일은 '+month+'월 '+day+'일 입니다.';
+    }
+    function gender3(){
+      var id1='12345';
+      var id2='7891011';
+      
+      var size1=id1.length;
+      var size2=id2.length;
+
+      if(size1 !=6 || size2!=7){
+        document.getElementById('dis').innerHTML='주민번호 기입 오류입니다.';
+      }
+      else{
+        document.getElementById('dis').innerHTML='확인 되었습니다.';
+      }
+
+    }
+    
+      var str = 'abcCitykimDal';
+      document.write(str.toLocaleLowerCase(),'<br>');
+      var str = 'abcCitykimDal';
+      document.write(str.toUpperCase(),'<br>');
+      
+      document.write('<br>');
+
+      //charAt
+      var str = 'abcCitykimDal';
+      document.write('charAt 결과=',str.charAt(4),'<br>');
+      
+      document.write('<br>');
+
+      //indexOf
+      var str = 'abcCitykimDal';
+      document.write("IndexOf 'a' 결과=",str.indexOf('a'),'<br>');
+      document.write("IndexOf 'k' 결과=",str.indexOf('C'),'<br>');
+
+      document.write('<br>');
+
+      //lastIndexOf
+      var str = 'abcCitykimDal';
+      document.write("lastIndexOf 'a'의 결과=",str.lastIndexOf('a'),'<br>');
+
+      document.write('<br>');
+
+      //substring
+      var str = 'abcCitykimDal';
+      document.write("substring(0,4)의 결과=",str.substring(0,4),'<br>');
+      document.write("substring(7)의 결과=",str.substring(7),'<br>');
+
+      var str = 'http://icoxpublish.com';
+      document.write('substr(4)의 결과',str.substr(7,4),'<br>');
+
+      document.write('<br>');
+  
+      //split
+      var str='abcCity_kimDal';
+      var division = str.split('_');
+      document.write("split의 결과=",division[0]+','+division[1],'<br>');
+
+      document.write('<br>');
+
+      //replace
+      var str='bar.gif';
+      document.write("replace의 결과=",str.replace('bar','over'),'<br>');
+
+      document.write('<br>');
+
+      var str1='abcCity';
+      var str2='_kimDal';
+      document.write("contact의 결과=",str.concat(str2),'<br>');
+
+      document.write('<br>');
+
+      var str='abcCity_kimDal';
+      document.write("trim의 결과=",str.trim(),'<br>');
+
+  
+  </script>
+</head>
+<body>
+  <!-- 교재 386페이지 -->
+  <br>
+  <br>
+  <div id="dis">
+    <input type="button" onclick="gender3()" value="결과">
+  </div>
+</body>
+</html>
